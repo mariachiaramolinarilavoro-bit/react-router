@@ -1,7 +1,14 @@
+import Navbar from "../components/Navbar"
+
 export default function AboutUs() {
 
     return (
-        
-        <h1>About Us</h1>
+        <>
+            <header>
+                <Navbar />
+            </header>
+            <main></main>
+            <footer></footer>
+        </>
     )
 }

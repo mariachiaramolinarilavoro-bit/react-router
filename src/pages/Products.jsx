@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import Navbar from "../components/Navbar"
 
 export default function Products() {
 
@@ -18,6 +19,7 @@ export default function Products() {
 
   return (
     <>
+      <Navbar />
       <h1>Products</h1>
       <div>
         {products.map((product) => (
