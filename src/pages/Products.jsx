@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-/* import Navbar from "../components/Navbar" */
+import { Link } from "react-router-dom"
 
 export default function Products() {
 
@@ -19,17 +19,25 @@ export default function Products() {
 
   return (
     <>
-{/*       <Navbar /> */}
-      <h1>Products</h1>
-        <div>
+      <div className="container mt-4 mb-2">
+        <h1 className="mb-4">Products</h1>
+        <div className="row row-cols-1 row-cols-md-3 g-4">
           {products.map((product) => (
-            <div key={product.id}>
-              <img src={product.image} alt={product.title} />
-              <h3>{product.title}</h3>
-              <p>€ {product.price}</p>
+            <div key={product.id} className="col">
+              <div className="card h-100 p-2 border-dark">
+                <img src={product.image} alt={product.title} className="products p-4"/>
+                <div className="card-body d-flex flex-column">
+                  <h3 className="card-title mt-auto">{product.title}</h3>
+                  <p className="card-text">€ {product.price} </p>
+                  <Link to={`/products/${product.id}`} className="btn btn-dark mt-2">
+                    Vedi dettaglio
+                  </Link>
+                </div>
+              </div>
             </div>
           ))}
         </div>
+      </div>
     </>
   )
 }

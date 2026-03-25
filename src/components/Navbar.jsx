@@ -1,12 +1,14 @@
-import { Link } from "react-router-dom"
+import { /* Link */ NavLink } from "react-router-dom"
+
+const getActive = ({ isActive }) => isActive ? "active" : ""
 
 export default function Navbar() {
   return (
     <header>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/aboutus">Chi siamo</Link>
-        <Link to="/products">Prodotti</Link>
+        <NavLink to="/" className={ getActive }>Home</NavLink>
+        <NavLink to="/aboutus" className={ getActive }>Chi siamo</NavLink>
+        <NavLink to="/products" className={ getActive }>Prodotti</NavLink>
       </nav>
     </header>
   )
