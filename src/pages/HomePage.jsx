@@ -1,11 +1,15 @@
+import { Link } from "react-router-dom"
+
 export default function HomePage() {
 
     return (
         <>
             <header>
-                <a href="/">Home</a>
-                <a href="/AboutUs">About us</a>
-                <a href="/products">Products</a>
+                <nav>
+                    <Link to="/">Home</Link>
+                    <Link to="/AboutUs">About us</Link>
+                    <Link to="/products">Products</Link>
+                </nav>
             </header>
             <main></main>
             <footer></footer>
