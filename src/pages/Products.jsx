@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Navbar from "../components/Navbar"
+/* import Navbar from "../components/Navbar" */
 
 export default function Products() {
 
@@ -19,17 +19,17 @@ export default function Products() {
 
   return (
     <>
-      <Navbar />
+{/*       <Navbar /> */}
       <h1>Products</h1>
-      <div>
-        {products.map((product) => (
-          <div key={product.id}>
-            <img src={product.image} alt={product.title} />
-            <h3>{product.title}</h3>
-            <p>€ {product.price}</p>
-          </div>
-        ))}
-      </div>
+        <div>
+          {products.map((product) => (
+            <div key={product.id}>
+              <img src={product.image} alt={product.title} />
+              <h3>{product.title}</h3>
+              <p>€ {product.price}</p>
+            </div>
+          ))}
+        </div>
     </>
   )
 }

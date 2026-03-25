@@ -1,14 +1,12 @@
-import Navbar from "../components/Navbar"
+/* import Navbar from "../components/Navbar" */
 
 export default function HomePage() {
 
     return (
         <>
-            <header>
-                <Navbar />
-            </header>
-            <main></main>
-            <footer></footer>
+{/*             <Navbar /> */}
+                <h1>Benvenuto nel nostro shop!</h1>
+                <p>Scopri i migliori prodotti al miglior prezzo.</p>
         </>
     )
 }
