@@ -1,7 +1,14 @@
 export default function HomePage() {
 
     return (
-
-        <h1>Home</h1>
+        <>
+            <header>
+                <a href="/">Home</a>
+                <a href="/AboutUs">About us</a>
+                <a href="/products">Products</a>
+            </header>
+            <main></main>
+            <footer></footer>
+        </>
     )
 }
