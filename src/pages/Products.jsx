@@ -15,7 +15,7 @@ export default function Products() {
       })
   }, [])
 
-  if (loading) return <p>Caricamento in corso prodotti...</p>
+  if (loading) return <p>Loading products...</p>
 
   return (
     <>
@@ -25,12 +25,12 @@ export default function Products() {
           {products.map((product) => (
             <div key={product.id} className="col">
               <div className="card h-100 p-2 border-dark">
-                <img src={product.image} alt={product.title} className="products p-4"/>
+                <img src={product.image} alt={product.title} className="products p-4" />
                 <div className="card-body d-flex flex-column">
                   <h3 className="card-title mt-auto">{product.title}</h3>
                   <p className="card-text">€ {product.price} </p>
                   <Link to={`/products/${product.id}`} className="btn btn-dark mt-2">
-                    Vedi dettaglio
+                    See detail
                   </Link>
                 </div>
               </div>
